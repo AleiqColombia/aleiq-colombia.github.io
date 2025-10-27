@@ -5,36 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ALEIQ Colombia</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="img/logo-aleiq.png" />
 </head>
 
 <body>
-  <header>
-    <nav>
-      <h1>🇨🇴 ALEIQ Colombia</h1>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Quiénes Somos</a></li>
-        <li><a href="projects.html">Proyectos</a></li>
-        <li><a href="news.html">Noticias</a></li>
-        <li><a href="contact.html">Contacto</a></li>
-      </ul>
-    </nav>
+  <!-- 🧭 ENCABEZADO -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <img src="img/logo-aleiq.png" alt="Logo ALEIQ Colombia" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Noticias</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- 🧪 HERO -->
   <section class="hero">
-    <h2>Ingeniería · Ciencia · Comunidad</h2>
-    <p>Delegación Colombiana de la Asociación Latinoamericana de Estudiantes de Ingeniería Química</p>
+    <div class="hero-content">
+      <h1>🇨🇴 ALEIQ Colombia</h1>
+      <p>Asociación Latinoamericana de Estudiantes de Ingeniería Química – Delegación Colombia</p>
+      <a href="#about" class="btn">Conócenos</a>
+    </div>
   </section>
 
-  <section class="content">
-    <h3>Bienvenidos a ALEIQ Colombia</h3>
-    <p>
-      Somos una comunidad de estudiantes y profesionales comprometidos con el desarrollo de la Ingeniería Química en Colombia y Latinoamérica.
-    </p>
+  <!-- 💡 SOBRE NOSOTROS -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>Quiénes Somos</h2>
+      <p>
+        Somos la delegación colombiana de la ALEIQ, una organización que conecta, impulsa y representa a los estudiantes de Ingeniería Química en toda Latinoamérica.
+        Promovemos el desarrollo académico, técnico y humano de los futuros ingenieros químicos, fomentando la innovación y la investigación aplicada.
+      </p>
+    </div>
   </section>
 
-  <footer>
+  <!-- 👥 DELEGADOS -->
+  <section class="section delegados">
+    <div class="container">
+      <h2>Delegados Nacionales 2025 – 2026</h2>
+      <div class="delegados-grid">
+        <div class="delegado-card">
+          <img src="img/delegados-2025-2026.jpg" alt="Delegados ALEIQ Colombia 2025–2026">
+          <p><strong>Juan David Parra Cantor</strong><br>Est. Ingeniería Química – UPB Medellín<br><em>Delegado Nacional</em></p>
+          <p><strong>Valeria Vegas Torres</strong><br>Est. Biotecnología – EIA<br><em>Delegada Nacional</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔬 PROYECTOS -->
+  <section class="section proyectos">
+    <div class="container">
+      <h2>Proyectos y Actividades</h2>
+      <p>
+        Estamos desarrollando iniciativas académicas, técnicas y científicas que promueven el crecimiento de la Ingeniería Química en Colombia y Latinoamérica.
+      </p>
+      <a href="#" class="btn-outline">Ver más</a>
+    </div>
+  </section>
+
+  <!-- 📬 CONTACTO -->
+  <section class="section contacto">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <p>¿Tienes preguntas o quieres colaborar con ALEIQ Colombia?</p>
+      <div class="contact-links">
+        <a href="mailto:aleiq.colombia@gmail.com">📧 aleiq.colombia@gmail.com</a>
+        <a href="https://instagram.com/aleiq.colombia" target="_blank">📸 @aleiq.colombia</a>
+        <a href="#">💼 LinkedIn (próximamente)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚙️ FOOTER -->
+  <footer class="footer">
     <p>© 2025 ALEIQ Colombia | Hecho con ❤️ por estudiantes de Ingeniería Química</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
