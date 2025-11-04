@@ -1,0 +1,99 @@
+@import url('style.css');
+
+/* ============================================================
+ESTILOS PARA LA PÁGINA DEL MODELO CANVAS - VENTUMARIS
+============================================================ */
+
+/* ---------- HERO (igual que galería) ---------- */
+.canvas-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #00B3A6, #00587A);
+}
+
+.canvas-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/content_principal3.jpg") center/cover no-repeat;
+    opacity: 0.15;
+}
+
+.canvas-hero .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.canvas-hero .hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.canvas-hero .hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- SECCIÓN DE IMAGEN ---------- */
+.canvas-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 80px;
+}
+
+.canvas-image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canvas-image-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* ---------- RESPONSIVIDAD ---------- */
+@media (max-width: 992px) {
+    .canvas-hero {
+        height: 300px;
+    }
+
+    .canvas-hero .hero-content h2 {
+        font-size: 34px;
+    }
+
+    .canvas-hero .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .canvas-hero .hero-content h2 {
+        font-size: 28px;
+    }
+
+    .canvas-hero .hero-content p {
+        font-size: 15px;
+    }
+
+    .canvas-image-section {
+        padding: 20px 0 60px;
+    }
+}

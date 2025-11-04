@@ -1,0 +1,286 @@
+/* Importar los estilos base para mantener consistencia */
+@import url('style.css');
+
+/* Estilos específicos para la página de galería */
+/* Estos estilos solo modifican el contenido principal, manteniendo el resto del diseño */
+
+/* Hero Section específico para galería */
+.galeria-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.galeria-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-hero .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
+    color: white;
+    padding: 40px;
+}
+
+.galeria-hero .hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.galeria-hero .hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+/* Contenido principal específico para galería */
+.galeria-container {
+    margin-top: 30px;
+}
+
+.galeria-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: #00587A;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.galeria-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+.galeria-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,88,122,0.9), rgba(0,88,122,0.7), transparent);
+    color: white;
+    padding: 15px 10px 10px;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .galeria-caption {
+    transform: translateY(0);
+}
+
+.video-container {
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-container video {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    background-color: #000;
+}
+
+.video-caption {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.video-caption h3 {
+    font-family: 'Playfair Display', serif;
+    color: #00587A;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.video-caption p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Estilos para el lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.lightbox:target {
+    display: block;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: 40px auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    display: block;
+}
+
+.lightbox-caption {
+    color: white;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.cerrar-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+}
+
+.cerrar-lightbox:hover {
+    color: #FFD700;
+    transform: rotate(90deg);
+}
+
+/* Estilos responsivos para la galería */
+@media (max-width: 992px) {
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+    
+    .galeria-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .galeria-item img {
+        height: 180px;
+    }
+    
+    .lightbox img {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+    
+    .cerrar-lightbox {
+        font-size: 35px;
+        right: 20px;
+    }
+    
+    .video-container video {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .galeria-item img {
+        height: 250px;
+    }
+    
+    .galeria-caption {
+        transform: translateY(0);
+        background: rgba(0,88,122,0.8);
+        padding: 10px;
+    }
+    
+    .galeria-item:hover .galeria-caption {
+        transform: translateY(0);
+    }
+    
+    .lightbox img {
+        max-width: 100%;
+        max-height: 60vh;
+        margin: 60px auto 20px;
+    }
+    
+    .cerrar-lightbox {
+        font-size: 30px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .video-container video {
+        max-height: 300px;
+    }
+    
+    .video-caption h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .galeria-item img {
+        height: 200px;
+    }
+    
+    .lightbox img {
+        max-height: 50vh;
+        margin: 80px auto 15px;
+    }
+    
+    .cerrar-lightbox {
+        font-size: 25px;
+    }
+}
